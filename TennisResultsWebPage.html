@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset = 'UTF-8'>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src = "JavaScriptSource.js" >
+
+</script>
+<title>Wimbledon Results 2013</title>
+</head>
+<body>
+	<h1>Wimbledon Results 2013</h1>
+	<form id = 'myForm'>
+		<fieldset>
+		<legend style = "font-size:16pt"><strong>Search Tournament</strong></legend>
+			<select id='tournamentSelect'>
+				<option value='na'>-- Select Tournament --</option>
+				<option value='wimbledon-women-2013.json'>Wimbledon Women's Tournament 2013</option>
+				<option value='wimbledon-men-2013.json'>Wimbledon Men's Tournament 2013</option>
+			</select>
+			<button style="float: right;" type = "button" id = "resetButton">Reset</button>
+		<br></br>
+		<legend><strong>Advanced Search</strong></legend>
+			<select id = 'selectPlayerNameOperator'>
+				<option id = "playerNameOption" value='na'>-- Select Player Name --</option>				
+				<option value='equals'>Equal to</option>
+				<option value='contains'>Which contains</option>
+				<option value='none'>Do not filter by Player Name</option>
+			</select>
+			<input id = 'selectPlayerName' placeholder = 'A.Surname'></input>				
+			<br></br>
+			<select id = 'selectRoundOperator'>
+				<option value='na'>-- Select Round(s) --</option>				
+				<option value='equals'>Equal to</option>
+				<option value='lessThan'>Less than</option>
+				<option value='greaterThan'>Greater than</option>
+			</select>
+			<select id='roundSelect'>
+				<option value='na'>-- Round Number --</option>	
+			
+			</select>
+			<br></br>	
+			<select id = 'selectNumOfSetsOperator'>
+				<option value='na'>-- Select Matches With Number Of Sets Played --</option>				
+				<option value='equals'>Equal to</option>
+				<option value='lessThan'>Less than</option>
+				<option value='greaterThan'>Greater than</option>
+			</select>
+			<select id='selectNumOfSets'>
+				<option value='na'>--Number Of Sets--</option>
+				
+			</select>
+			<button  style = "background-color: yellow" type = "button" id = "searchButton"><strong>Search</strong></button>
+
+		</fieldset>
+	</form>
+
+    <div style = "text-align: center" id = "container" >
+		<font size="3" face="exo 2" >
+		<table id = "table">
+			
+		</table>
+	</div>
+	
+</body>
+</html>
